@@ -3,13 +3,12 @@ package com.elpath.managementshipping
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.elpath.managementshipping.Login.LoginActivity
+import com.elpath.managementshipping.Order.OrderFragment
 import com.elpath.managementshipping.SharedPrefManager.SharedPrefManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.Optional.of
 
 class MainActivity : AppCompatActivity() {
     private lateinit var viewModel: FragmentViewModel

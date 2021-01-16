@@ -1,4 +1,4 @@
-package com.elpath.managementshipping
+package com.elpath.managementshipping.Order
 
 data class Order (
     val alamat: String,

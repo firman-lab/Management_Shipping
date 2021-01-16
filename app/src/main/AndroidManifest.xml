@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Network.NoConnectionActivity"></activity>
+        <activity android:name=".Order.DetailOrderActivity"></activity>
+        <activity android:name=".Network.NoConnectionActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Login.LoginActivity">
             <intent-filter>

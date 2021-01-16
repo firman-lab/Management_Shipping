@@ -1,4 +1,6 @@
-package com.elpath.managementshipping
+package com.elpath.managementshipping.Order
+
+import com.elpath.managementshipping.Order.Order
 
 data class OrderRespon(
     val value : String,

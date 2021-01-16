@@ -1,7 +1,7 @@
 package com.elpath.managementshipping.Network
 
 import com.elpath.managementshipping.Login.LoginResponse
-import com.elpath.managementshipping.OrderRespon
+import com.elpath.managementshipping.Order.OrderRespon
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.Field

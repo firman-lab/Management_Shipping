@@ -1,9 +1,10 @@
-package com.elpath.managementshipping
+package com.elpath.managementshipping.Order
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.elpath.managementshipping.R
 import kotlinx.android.synthetic.main.list_order.view.*
 
 class OrderAdapter(var orderList: ArrayList<Order>) : RecyclerView.Adapter<OrderAdapter.ViewHolder>() {
