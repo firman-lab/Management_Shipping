@@ -1,9 +1,12 @@
 package com.elpath.managementshipping
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
+import com.elpath.managementshipping.Login.LoginActivity
+import com.elpath.managementshipping.SharedPrefManager.SharedPrefManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.Optional.of
@@ -59,6 +62,15 @@ class MainActivity : AppCompatActivity() {
             }
             transaction.commit()
             viewModel.lastActiveFragmentTag = tag
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        if (!SharedPrefManager.getInstance(this).isLoggedIn){
+            val intent = Intent(applicationContext, LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
         }
     }
 }

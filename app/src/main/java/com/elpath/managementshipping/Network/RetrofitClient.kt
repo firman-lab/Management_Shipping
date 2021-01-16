@@ -7,7 +7,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 //private const val BASE_URL = "http://jinan.onlineskck.com/"
-private const val BASE_URL = "http://192.168.1.11/tokped/"
+private const val BASE_URL = "http://192.168.1.13/tokped/"
 
 object RetrofitClient {
 

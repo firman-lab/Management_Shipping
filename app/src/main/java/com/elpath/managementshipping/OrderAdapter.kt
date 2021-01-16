@@ -24,6 +24,8 @@ class OrderAdapter(var orderList: ArrayList<Order>) : RecyclerView.Adapter<Order
         fun bind(response: Order){
             with(itemView){
                 nama.text = response.nama_pembeli
+                barang.text = response.nama_barang
+                jml_barang.text=response.jumlah_barang
                 alamat.text = response.alamat
                 resi.text = response.kode_kirim
                 status.text = response.status
