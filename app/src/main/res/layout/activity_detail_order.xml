@@ -70,4 +70,20 @@
         app:layout_constraintBottom_toBottomOf="@+id/jml_brg_detail"
         app:layout_constraintStart_toEndOf="@+id/jml_brg_detail"
         app:layout_constraintTop_toTopOf="@+id/jml_brg_detail" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        tools:ignore="UnusedAttribute" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
