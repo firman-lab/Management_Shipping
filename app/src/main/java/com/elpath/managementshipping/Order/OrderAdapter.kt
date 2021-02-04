@@ -1,5 +1,6 @@
 package com.elpath.managementshipping.Order
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -41,6 +42,12 @@ class OrderAdapter(var orderList: ArrayList<Order>) : RecyclerView.Adapter<Order
                     else -> {
                         imgKurir.setImageResource(R.drawable.jnt)
                     }
+                }
+
+                itemView.setOnClickListener {
+                    val inten = Intent(itemView.context, DetailOrderActivity::class.java)
+                    inten.putExtra("order", response)
+                    itemView.context.startActivity(inten)
                 }
             }
         }

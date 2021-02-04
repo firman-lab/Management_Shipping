@@ -60,12 +60,14 @@ class OrderFragment : Fragment() {
     private suspend fun loadOrder(){
         val response = RetrofitClient.instances.orders()
         val value = response.body()?.value
-        if (value!! == "1"){
+        if (value == "1"){
             response.body()?.response?.let { showOrder(it) }
             pbOrder.visibility = View.GONE
         }else{
-            Toast.makeText(context, response.body()?.message, Toast.LENGTH_SHORT).show()
+            //Toast.makeText(context, response.body()?.response.toS, Toast.LENGTH_SHORT).show()
             pbOrder.visibility = View.GONE
+            swipeRefreshOrder.visibility = View.GONE
+            noOrder.visibility = View.VISIBLE
         }
     }
 
@@ -78,6 +80,7 @@ class OrderFragment : Fragment() {
         }
         rvOrder.setHasFixedSize(true)
         rvOrder.adapter?.notifyDataSetChanged()
+
     }
     @SuppressLint("NewApi")
     private  fun  isConnected(): Boolean{
